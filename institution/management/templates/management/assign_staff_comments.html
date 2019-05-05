@@ -1,0 +1,179 @@
+{% extends 'default_theme/base/__base.html' %}
+{% load staticfiles %}
+ {% block Style_sheets %}
+ <style>
+ body{margin-top:20px;}
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+                                    
+ 
+ 
+ 
+ </style>
+
+ {% endblock Style_sheets %}
+  
+ {% load widget_tweaks %}
+ 
+  {% block Content_Area %}
+  
+      <div class="row">
+      <div class="col-md-12">
+                     <div class="row bootstrap snippets">
+    <div class="col-md-10 col-md-offset-2 col-sm-12">
+        <div class="comment-wrapper">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Comment 
+                </div>
+                <div class="panel-body">
+                <div class="alert alert-success" style="display:none;" id="success-msg">
+  							<strong>comments post successfully.</strong>
+						</div>
+				 <form role="form" action="#" novalidate="novalidate" method='post' enctype="multipart/form-data" name="formname" id="post_form">		
+               
+                    <textarea class="form-control" placeholder="write a comment..."  name="message" id="message_id" rows="3"></textarea>
+                    <br>
+                    <button type="button" class="btn btn-info pull-right" id="post_data">Post</button>
+                    </form>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <ul class="media-list" id="append_list">
+                        <li class="media">
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+                 
+                     
+                     
+                </div>
+ 
+ 
+ 
+ </div>
+ 
+  {% endblock Content_Area %}
+  
+  
+  
+   {% block Java_Scripts %}
+  
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	
+	function fetchdata(){
+		 
+		 var urldetails = 'http://3.18.113.243:8004/managementapi/staffcommentlist/';
+		 
+		 $.ajax({
+				
+			 
+			  url: urldetails,
+			  csrfmiddlewaretoken: "{{ csrf_token }}",
+			  //data: JSON.stringify(values),
+			  headers: {
+			      'Accept': 'application/json',
+			     'Content-Type': 'application/json'
+			     },
+			 
+			   dataType: 'json',
+			   success: function(content){
+			          var obj = JSON.stringify(content);
+				      var json_obj = JSON.parse(obj);
+			          console.log(json_obj)
+			          $('#append_list').empty();
+			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on){
+				        	
+				        	$("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.message+'</strong><p>'+this.message+'</p></div></li>');
+				        	
+				    });
+			          
+			          
+			        },
+			   error: function(XMLHttpRequest, textStatus, errorThrown) {
+			            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+			            }
+				
+		});
+		 
+		 
+	} 
+	 //setInterval(fetchdata,5000);	 
+	 setTimeout(fetchdata,1000);
+	
+	
+});
+
+
+$('body').on('click', '#post_data11', function(event) {
+	event.preventDefault();
+	   var urldetails = 'http://3.18.113.243:8004/managementapi/staffcommentlist/';
+		var group =  {{ assign_group_detail.assign_group_pk.id }}
+		var student_assign_id = {{ assign_group_detail.id}}
+		var message = $("#message_id").val();
+		var values  =	{ 	
+							
+							"assign_group_pk": group,
+							"assign_group_detail":student_assign_id,
+							"message":message
+		          			
+		       			}
+		console.log(values);
+		
+
+		$.ajax({
+			
+			  type: "POST",
+			  url: urldetails,
+			  csrfmiddlewaretoken: "{{ csrf_token }}",
+			  data: JSON.stringify(values),
+			  headers: {
+			      'Accept': 'application/json',
+			     'Content-Type': 'application/json'
+			     },
+			   dataType: 'json',
+			   success: function(){
+			          //alert("Saved! It worked.");
+			          $('#success-msg').show();
+			        
+			          
+			        },
+			   error: function(XMLHttpRequest, textStatus, errorThrown) {
+			            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+			            }
+				
+		});
+		
+	
+
+});
+
+
+
+   
+   </script>
+   
+   
+     {% endblock %}

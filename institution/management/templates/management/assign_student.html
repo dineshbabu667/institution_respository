@@ -1,0 +1,122 @@
+{% extends 'default_theme/base/__base.html' %}
+{% load staticfiles %}
+ {% block Style_sheets %}
+ 
+
+ {% endblock Style_sheets %}
+  
+ {% load widget_tweaks %}
+ 
+  {% block Content_Area %}
+  
+   <div class="row">
+      <div class="col-md-12">
+                     <div class="panel panel-info">
+                        <div class="panel-heading">
+                            {{ Title }}
+                        </div>
+                        <div class="alert alert-success" style="display:none;" id="success-msg">
+  							<strong>Successfully Students assigned to group</strong>
+						</div>
+                        <div class="panel-body">
+                            <form role="form" action="#" novalidate="novalidate" method='post' enctype="multipart/form-data" name="formname" id="post_form">
+                             {% csrf_token %} 
+                                        {{ form.media }}
+                                    	<div class="form-group">
+                                            <label>Group </label>
+                                             <select id="id_group"  name="group" class="form-control " required="required">
+                								{% for group in group_qs %}
+             									 <option value="{{group.id }}">{{ group.group_name }}</option>
+            									 {% endfor %}
+   									        </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Student </label>
+                                             <select id="id_assign_student" multiple="multiple" name="assign_student[]" class="form-control " required="required">
+                								{% for student in student_qs %}
+             									 <option value="{{student.id }}">{{ student.user.username }}</option>
+            									 {% endfor %}
+   									        </select>
+                                            
+                                        </div>
+                               			  
+                                        <button type="button" class="btn btn-success" id="submit_id">Submit </button>
+                                        <button type="reset" class="btn btn-primary">Reset Fields</button>
+
+                                    </form>
+                            </div>
+                        </div>
+                </div>
+ 
+ 
+ 
+ </div>
+ 
+  {% endblock Content_Area %}
+  
+  
+  
+   {% block Java_Scripts %}
+  
+<script type="text/javascript">
+
+function serealizeSelects (select)
+{
+    var array = [];
+    select.each(function(){ array.push($(this).val()) });
+    return array;
+}
+
+
+
+$('body').on('click', '#submit_id', function(event) {
+	
+	event.preventDefault();
+	
+	
+	var group_value = $("#id_group").val();
+	var student_value= $("#id_assign_student").val();
+	
+	//var selectednumbers = serealizeSelects($('#id_assign_student'));
+	
+	var urldetails = 'http://3.18.113.243:8004/managementapi/assignstudentapi/';
+	
+	var values  =	{ 	
+						'assign_group_pk' : group_value,
+	          			'assign_student_id': student_value,
+	          			
+	       			}
+	console.log(values);
+	
+	
+	
+	$.ajax({
+		
+		  type: "POST",
+		  url: urldetails,
+		  csrfmiddlewaretoken: "{{ csrf_token }}",
+		  data: JSON.stringify(values),
+		  headers: {
+		      'Accept': 'application/json',
+		     'Content-Type': 'application/json'
+		     },
+		   dataType: 'json',
+		   success: function(){
+		          //alert("Saved! It worked.");
+		          $('#success-msg').show();
+		          
+		        },
+		   error: function(XMLHttpRequest, textStatus, errorThrown) {
+		            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+		            }
+			
+	});
+
+});
+
+
+   
+   </script>
+   
+   
+     {% endblock %}

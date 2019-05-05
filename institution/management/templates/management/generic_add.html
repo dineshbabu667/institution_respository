@@ -1,0 +1,85 @@
+{% extends 'default_theme/base/__base.html' %}
+
+ {% block Style_sheets %}
+ {% endblock Style_sheets %}
+ 
+ 
+ {% load widget_tweaks %}
+  {% load render_table from django_tables2 %}
+ 
+  {% block Content_Area %}
+  
+  {% if messages %}				
+   						{% for message in messages %}
+   						{% if message.tags %}  
+						<div class="alert alert-success">
+  							<strong>Success!</strong>{{ message }}
+  							
+  							<button class="toast-close-button" role="button"> x </button>
+						</div>
+						
+						{% endif %}
+   						{% endfor %}
+						{% endif %}  
+  
+  
+   <div class="row">
+      <div class="col-md-12">
+                     <div class="panel panel-info">
+                        <div class="panel-heading">
+                            {{ Title }}
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" novalidate="novalidate" method='post' enctype="multipart/form-data">
+                             {% csrf_token %} 
+                                        {{ form.media }}
+                                        
+                                     {% for ind_form in form %}     
+                                        <div class="form-group">
+                                            <label>{{ind_form.label}}</label>
+                                             {% render_field ind_form class+="form-control" placeholder=ind_form.label %} 
+                                           
+                                        </div>
+                                         {{ind_form.errors}}
+                                         
+                               			{% endfor %}  
+                                        <button type="submit" class="btn btn-success" id="id_submit">Submit </button>
+                                        <button type="reset" class="btn btn-primary">Reset Fields</button>
+
+                                    </form>
+                            </div>
+                        </div>
+                </div>
+ 
+ 
+ 
+ 
+ </div>
+  <div class="row">
+      <div class="col-md-12">
+                     <div class="panel panel-success">
+                        <div class="panel-heading">
+                         {{ Listtitle }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                               {% render_table table %}	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+ 
+ 
+ 
+ </div>
+  {% endblock Content_Area %}
+  
+  
+  
+   {% block Java_Scripts %}
+   
+   
+     {% endblock %}
+ 
+ 

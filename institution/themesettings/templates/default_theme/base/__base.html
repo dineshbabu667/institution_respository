@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Online Institution - {{ Title}}</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="{% static "assets/css/bootstrap.css" %}" rel="stylesheet" />
+    <!-- FONT AWESOME STYLE  -->
+    <link href="{% static "assets/css/font-awesome.css" %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="{% static "assets/css/style.css" %}" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans"  rel='stylesheet' type='text/css' />
+    {% block Style_sheets %}
+    
+	{% endblock Style_sheets %}
+</head>
+<body>
+    <div class="navbar navbar-inverse set-radius-zero" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+
+                    <img src="{% static "assets/img/company_logo.jpg"  %}" width="150px" height="150px" />
+                </a>
+
+            </div>
+
+            <div class="right-div">
+                <a href="/logout" class="btn btn-danger pull-right">LOG ME OUT</a>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+    
+    <!-- Nava bar -->
+    {% block Nav_bar %}
+    	{% include 'default_theme/base/__Nav_Bar.html' %}
+    {% endblock Nav_bar %}
+    
+    
+    <!-- Nav bar  -->
+     <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">{{ Title}}</h4>
+                
+                            </div>
+
+        </div>
+             
+                  
+   {% block Content_Area %}
+            
+  {% endblock Content_Area %}
+
+     
+         
+
+    </div>
+    </div>
+     <!-- CONTENT-WRAPPER SECTION END-->
+  	{% block Footer %}
+	
+		{% include 'default_theme/base/__Footer.html' %}
+	
+	{% endblock Footer %}
+      <!-- FOOTER SECTION END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="{% static "assets/js/jquery-1.10.2.js" %}"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="{% static "assets/js/bootstrap.js" %}"></script>
+      <!-- CUSTOM SCRIPTS  -->
+    <!--  <script src="{% static "assets/js/custom.js" %}"></script>-->
+  {% block Java_Scripts %}
+  
+  {% endblock %}
+</body>
+</html>

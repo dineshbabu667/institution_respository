@@ -1,0 +1,129 @@
+{% extends 'default_theme/base/__base.html' %}
+{% load staticfiles %}
+{% block Style_sheets %}
+    
+	{% endblock Style_sheets %}
+ {% block Content_Area %}
+ 
+<div class="row">
+            <div class="col-md-12">
+             <div class="alert alert-success" style="display:none;" id="success-msg">
+  							<strong>Successfully join the group and plz click view the comments.</strong>
+						</div>
+            <table class="table table-striped table-bordered table-hover" id="Table_list">
+            <tr>
+            <td>Group Name</td>
+            <td>Assigned By</td>
+            <td>Status</td>
+            <td>Action</td>
+            
+            </tr>
+            {% for item in assign_group_qs %}
+            <tr>
+             <td>{{item.assign_group_pk}}</td>
+             <td>{{item.assign_group_pk.created_by}}</td>
+             <td>{{item.get_assign_student_status_display }}</td>
+             <td> 
+             {% if item.assign_student_status == 0 %}
+             <div id="group_update" style="display:show;">
+               <a href="#" class="btn btn-primary" id="student_group_update" rel="{{item.id}}" >Connect</a>
+             </div>
+              <div id="group_comments" style="display:none;">
+              	 <a href="/studentscomments/{{ item.id }}/" class="btn btn-primary">Comments</a>
+              </div>
+            
+              
+             {% elif  item.assign_student_status == 1 %}
+             
+               <a href="/studentscomments/{{ item.id }}/" class="btn btn-primary">Comments</a>
+               
+              {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+            </table>
+            
+            
+            
+            
+            
+            
+            
+              
+                            </div>
+
+        </div>
+            
+  {% endblock Content_Area %}
+    
+    
+    
+     {% block Java_Scripts %}
+     
+     
+ <script type="text/javascript">
+
+ 
+
+ 
+ $('body').on('click', '#student_group_update', function(event) {
+	
+	event.preventDefault();
+	var assign_id=$(this).attr('rel');
+	var urldetails = 'http://3.18.113.243:8004/managementapi/updatestatusapi/'+assign_id+'/';
+	
+	var values  =	{ 	
+						
+						"assign_student_status": 1
+	          			
+	       			}
+	console.log(values);
+	
+	
+	
+	$.ajax({
+		
+		  type: "PUT",
+		  url: urldetails,
+		  csrfmiddlewaretoken: "{{ csrf_token }}",
+		  data: JSON.stringify(values),
+		  headers: {
+		      'Accept': 'application/json',
+		     'Content-Type': 'application/json'
+		     },
+		   dataType: 'json',
+		   success: function(){
+		          //alert("Saved! It worked.");
+		          $('#success-msg').show();
+		         $('#group_update').hide();
+		         $('#group_comments').show();
+		          
+		        },
+		   error: function(XMLHttpRequest, textStatus, errorThrown) {
+		            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+		            }
+			
+	});
+
+});
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   </script>    
+     
+     
+     
+     
+     
+     
+     
+  
+  {% endblock %}
+    
+    

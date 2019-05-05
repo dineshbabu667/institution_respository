@@ -1,0 +1,53 @@
+{% extends 'default_theme/base/__loginbase.html' %}
+
+{% block Style_sheets %}
+    
+{% endblock Style_sheets %}
+	
+	
+{% load widget_tweaks %}	
+ {% block Content_Area %}
+ 
+ <div class="row">
+      <div class="col-md-12">
+                     <div class="panel panel-info">
+                        <div class="panel-heading">
+                          Student Register
+                        </div>
+                        <div class="panel-body">
+                            <form role="form"  method="post"  name="register" id="registerform">
+                            {% csrf_token %}
+                                        
+                                 {{ form.media }}
+                                        
+                                     {% for ind_form in form %}     
+                                        <div class="form-group">
+                                            <label>{{ind_form.label}}</label>
+                                             {% render_field ind_form class+="form-control" placeholder=ind_form.label %} 
+                                           
+                                        </div>
+                               			{% endfor %}  
+                                       
+                                        <button type="submit" class="btn btn-success">Register </button>
+                                        <button type="reset" class="btn btn-primary">Reset Fields</button>
+
+                                    </form>
+                            </div>
+                        </div>
+                </div>
+ 
+ 
+ 
+ 
+ </div>
+ 
+            
+  {% endblock Content_Area %}
+    
+    
+    
+     {% block Java_Scripts %}
+  
+  {% endblock %}
+    
+    

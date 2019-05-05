@@ -1,0 +1,83 @@
+{% extends 'default_theme/base/__base.html' %}
+{% load staticfiles %}
+{% block Style_sheets %}
+    
+	{% endblock Style_sheets %}
+	  {% load render_table from django_tables2 %}
+	 {% load django_tables2 crispy_forms_tags %}
+	
+ {% block Content_Area %}
+ 
+ <div class="row">
+
+   <div class="panel-group accordion" id="accordion1">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title">
+                                                        <a id="accordion-search" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1" aria-expanded="false">
+                                                         <i class="fa fa-search font-dark"></i>
+                                            			 <span class="caption-subject font-dark bold uppercase">Advanced Search</span>
+                                            			 <span style="float:right"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                                                        </a>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div id="collapse_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                                    <div class="panel-body">
+                                                        {% crispy filter.form filter.form.helper %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+  
+
+ 
+    <div class="row">
+                <div class="col-md-12">
+                     <!--    Hover Rows  -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           {{ Title }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                              {% render_table table %}	
+                            
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End  Hover Rows  -->
+                </div>
+ 
+ 
+ 
+ 
+ </div>
+ 
+            
+  {% endblock Content_Area %}
+    
+    
+    
+     {% block Java_Scripts %}
+  <script>
+
+	
+	$('body').on('click', '#reset-search', function () {
+		
+		window.location = "{% url Reset_url %}";
+		console.log('Inner')
+		
+	});
+		
+	
+</script>	
+
+  
+  {% endblock %}
+    
+    

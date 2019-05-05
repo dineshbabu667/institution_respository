@@ -1,0 +1,36 @@
+<section class="menu-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                        
+                         {% if request.session.customer_login == 'customer_login' %}
+                           		 <li><a href="{% url 'management:studentlanding' %}" class="menu-top-active">Dashboard </a></li>
+                            {% endif %}
+                           {% if request.session.customer_login != 'customer_login' %} 
+                             	<li><a href="{% url 'management:courseadd' %}" class="menu-top-active">Courses</a></li>
+                           
+                            	<li><a href="{% url 'management:groupadd' %}">Group</a></li>
+                           
+                            	<li><a href="{% url 'management:assignstudent' %}">Assign Student</a></li>
+                            
+                             	<li><a href="{% url 'management:stafflanding' %}">Assign Student List</a></li>
+                            
+                            
+                            {% endif %}
+							 <!--  
+                            <li>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">UI ELEMENTS <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="ui.html">UI ELEMENTS</a></li>
+                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">EXAMPLE LINK</a></li>
+                                </ul>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
