@@ -50,7 +50,7 @@ class AssignGroupDetail_Table(tables.Table):
          <a href="#" class="btn btn-warning unblock_btn" id="id-{{record.id}}-unblock_btn" rel="{{record.id}}">UnBlock</a>
     {% endif %}    
      {% if  record.assign_student_status == 0 %}    
-          <a href="#" class="btn btn-info" >Request Sent</a>
+             <a href="{% url 'management:staffcomments' record.id %}" class="btn btn-primary">Comments</a>
      {%endif %}
      
     """
