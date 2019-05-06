@@ -42,21 +42,32 @@ class AssignGroupListSerializer(serializers.ModelSerializer):
         fields = ('assign_student_status', )  
 
 class StudentCommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AssignGroupComments
+        fields = ('assign_group_pk','assign_group_detail', 'message' )
+
+class StudentCommentsListSerializer(serializers.ModelSerializer):
     created_on = serializers.DateTimeField(format='%Y -%m -%d')
     #groupname = serializers.ReadOnlyField(source='assign_group_pk.group_name')
-    #studentname = serializers.ReadOnlyField(source='assign_group_detail.assign_student', read_only=True)
+    student_name = serializers.ReadOnlyField()
+    staff_name = serializers.ReadOnlyField(source='group_created_by.username')
     class Meta:
         model = AssignGroupComments
-        fields = ('assign_group_pk','assign_group_detail', 'message','created_on' )
+        fields = ('assign_group_pk','assign_group_detail','group_created_by','student_name','staff_name','message','created_on' )
 
 class StaffCommentsSerializer(serializers.ModelSerializer):
-    created_on = serializers.DateTimeField(format='%Y -%m -%d')
-  
+    
     class Meta:
         model = AssignGroupComments
-        fields = ('assign_group_pk','assign_group_detail','group_created_by', 'message', 'created_on')
+        fields = ('assign_group_pk','group_created_by', 'message', )
 
-
+class StaffCommentsListSerializer(serializers.ModelSerializer):
+    created_on = serializers.DateTimeField(format='%Y -%m -%d')
+    student_name = serializers.ReadOnlyField()
+    staff_name = serializers.ReadOnlyField(source='group_created_by.username')
+    class Meta:
+        model = AssignGroupComments
+        fields = ('assign_group_pk','assign_group_detail','group_created_by','student_name','staff_name', 'message', 'created_on')
 
        
      

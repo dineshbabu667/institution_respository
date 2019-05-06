@@ -146,7 +146,7 @@ def assign_staff_comments(request,id):
         context={} 
         
         
-        assign_group_detail = AssignGroupDetail.objects.filter(assign_group_pk=id)
+        assign_group_detail = AssignGroupDetail.objects.get(id=id )
        
         context={
              'Title':'Staff Comments',

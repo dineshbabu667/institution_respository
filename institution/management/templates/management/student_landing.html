@@ -32,11 +32,12 @@
               	 <a href="/studentscomments/{{ item.id }}/" class="btn btn-primary">Comments</a>
               </div>
             
-              
              {% elif  item.assign_student_status == 1 %}
              
                <a href="/studentscomments/{{ item.id }}/" class="btn btn-primary">Comments</a>
                
+              {% else %} 
+                <a href="#" class="btn btn-danger">Block</a>
               {% endif %}
               </td>
             </tr>

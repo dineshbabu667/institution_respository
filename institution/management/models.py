@@ -56,6 +56,7 @@ class Courses(models.Model):
 
 class Group(models.Model):
     group_name = models.CharField(max_length=50,verbose_name='Group Name',unique=True)
+    course=models.ForeignKey(Courses,verbose_name="Course")
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='%(class)s_Created_By')
     status =  models.IntegerField(choices=STATUS, default=0,verbose_name='Status')
     created_on = models.DateTimeField(auto_now_add = True)
@@ -101,4 +102,6 @@ class AssignGroupComments(models.Model):
 
     def __str__(self):
         return str(self.created_on)
-       
+    @property
+    def student_name(self):
+        return self.assign_group_detail.assign_student.user.username   

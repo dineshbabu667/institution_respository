@@ -53,8 +53,8 @@ class GroupAddform(forms.ModelForm):
     
     class Meta:
         model= Group
-        fields='__all__'
-        exclude=['created_by','created_on','modified_on',]
+        fields=['course','group_name']
+        exclude=['created_by','created_on','modified_on','status']
         
 
         

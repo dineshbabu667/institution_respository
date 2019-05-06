@@ -1,0 +1,219 @@
+[05/May/2019 13:05:32] "GET /staffcomments/1/ HTTP/1.1" 200 9003
+[05/May/2019 13:05:32] "GET /static/assets/css/style.css HTTP/1.1" 200 4628
+[05/May/2019 13:05:32] "GET /static/assets/css/font-awesome.css HTTP/1.1" 200 25197
+[05/May/2019 13:05:33] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 132546
+[05/May/2019 13:05:33] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[05/May/2019 13:05:33] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[05/May/2019 13:05:33] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[05/May/2019 13:05:34] "GET /favicon.ico HTTP/1.1" 404 4168
+[05/May/2019 13:05:35] "GET /staffcomments/1/ HTTP/1.1" 200 9003
+[05/May/2019 13:05:36] "GET /staffcomments/1/ HTTP/1.1" 200 9003
+[05/May/2019 13:05:36] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 0
+[05/May/2019 13:05:36] "GET /static/assets/css/font-awesome.css HTTP/1.1" 304 0
+[05/May/2019 13:05:36] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[05/May/2019 13:05:36] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[05/May/2019 13:05:36] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[05/May/2019 13:05:37] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+Not Found: /
+[05/May/2019 13:05:46] "GET / HTTP/1.1" 404 4117
+[05/May/2019 13:05:51] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[05/May/2019 13:05:52] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[05/May/2019 13:05:52] "GET /static/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23320
+[05/May/2019 13:05:52] "GET /static/assets/img/course_2.png HTTP/1.1" 200 42393
+[05/May/2019 13:05:52] "GET /static/assets/img/course_3.png HTTP/1.1" 200 106496
+[05/May/2019 13:08:01] "GET /studentlogin HTTP/1.1" 301 0
+[05/May/2019 13:08:01] "GET /studentlogin/ HTTP/1.1" 200 7104
+[05/May/2019 13:08:01] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 106496
+[05/May/2019 13:08:10] "POST /studentlogin/ HTTP/1.1" 302 0
+[05/May/2019 13:08:10] "GET /studentlanding/ HTTP/1.1" 200 7783
+[05/May/2019 13:08:13] "GET /logout HTTP/1.1" 301 0
+[05/May/2019 13:08:14] "GET /logout/ HTTP/1.1" 302 0
+[05/May/2019 13:08:14] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[05/May/2019 13:08:14] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:00:45] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 49152
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:00:45] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:00:46] "GET /static/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23320
+Not Found: /favicon.ico
+[06/May/2019 05:00:46] "GET /favicon.ico HTTP/1.1" 404 4168
+[06/May/2019 05:00:52] "GET /home/ HTTP/1.1" 200 8243
+[06/May/2019 05:00:52] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/css/font-awesome.css HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/js/custom.js HTTP/1.1" 304 0
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:00:52] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:00:52] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+[06/May/2019 05:00:52] "GET /static/assets/img/course_1.png HTTP/1.1" 304 0
+[06/May/2019 05:00:53] "GET /static/assets/img/course_2.png HTTP/1.1" 304 0
+[06/May/2019 05:00:53] "GET /static/assets/img/course_3.png HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /home/ HTTP/1.1" 200 8243
+[06/May/2019 05:05:51] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/js/custom.js HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/css/font-awesome.css HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/img/course_1.png HTTP/1.1" 304 0
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:05:51] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:05:51] "GET /static/assets/img/course_2.png HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+[06/May/2019 05:05:51] "GET /static/assets/img/course_3.png HTTP/1.1" 304 0
+[06/May/2019 05:06:00] "GET /admin/auth/user/1/change/ HTTP/1.1" 302 0
+[06/May/2019 05:06:00] "GET /admin/login/?next=/admin/auth/user/1/change/ HTTP/1.1" 200 1688
+[06/May/2019 05:16:20] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:16:20] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:16:20] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 49152
+[06/May/2019 05:35:18] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:35:19] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:42:14] "GET /home/ HTTP/1.1" 200 8243
+[06/May/2019 05:42:15] "GET /home/ HTTP/1.1" 200 8243
+[06/May/2019 05:42:15] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/css/font-awesome.css HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/js/custom.js HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/img/course_1.png HTTP/1.1" 304 0
+Not Found: /home/assets/img/user2.png
+[06/May/2019 05:42:15] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[06/May/2019 05:42:15] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/img/course_2.png HTTP/1.1" 304 0
+[06/May/2019 05:42:15] "GET /static/assets/img/course_3.png HTTP/1.1" 304 0
+Not Found: /
+[06/May/2019 06:06:02] "GET / HTTP/1.1" 404 4117
+Not Found: /favicon.ico
+[06/May/2019 06:06:02] "GET /favicon.ico HTTP/1.1" 404 4168
+[06/May/2019 06:06:15] "GET /login HTTP/1.1" 301 0
+[06/May/2019 06:06:15] "GET /login/ HTTP/1.1" 200 7065
+[06/May/2019 06:06:16] "GET /static/assets/css/font-awesome.css HTTP/1.1" 200 25197
+[06/May/2019 06:06:16] "GET /static/assets/css/style.css HTTP/1.1" 200 4628
+[06/May/2019 06:06:17] "GET /static/assets/js/custom.js HTTP/1.1" 200 1131
+[06/May/2019 06:06:17] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 200 93104
+[06/May/2019 06:06:17] "GET /static/assets/js/bootstrap.js HTTP/1.1" 200 60681
+[06/May/2019 06:06:18] "GET /static/assets/img/course_2.png HTTP/1.1" 200 42393
+[06/May/2019 06:06:18] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 132546
+[06/May/2019 06:06:19] "GET /static/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23320
+[06/May/2019 06:06:20] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 200 310915
+[06/May/2019 06:06:21] "GET /static/assets/img/course_1.png HTTP/1.1" 200 344346
+[06/May/2019 06:06:22] "GET /static/assets/img/course_3.png HTTP/1.1" 200 249453
+[06/May/2019 06:06:30] "POST /login/ HTTP/1.1" 302 0
+[06/May/2019 06:06:31] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:06:32] "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.1.0 HTTP/1.1" 200 83760
+[06/May/2019 06:06:44] "GET /groupadd HTTP/1.1" 200 10037
+[06/May/2019 06:06:46] "GET /groupadd HTTP/1.1" 200 10037
+[06/May/2019 06:06:52] "GET /assignstudent HTTP/1.1" 200 9184
+[06/May/2019 06:06:57] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:07:09] "GET /staffcomments/1/ HTTP/1.1" 200 9003
+[06/May/2019 06:07:53] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:08:25] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:08:27] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:08:29] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:08:30] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:08:40] "GET /assignstudent HTTP/1.1" 200 9184
+[06/May/2019 06:08:41] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:08:55] "POST /managementapi/assignstudentapi/ HTTP/1.1" 201 57
+[06/May/2019 06:09:06] "GET /groupadd HTTP/1.1" 200 10037
+[06/May/2019 06:09:06] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:09:13] "GET /assignstudent HTTP/1.1" 200 9184
+[06/May/2019 06:09:13] "GET /assignstudent HTTP/1.1" 200 9184
+[06/May/2019 06:09:14] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:09:19] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:09:19] "GET /stafflanding HTTP/1.1" 200 27705
+[06/May/2019 06:09:20] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:09:27] "GET /stafflanding?page=2 HTTP/1.1" 200 18700
+[06/May/2019 06:09:28] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[06/May/2019 06:50:28] "GET /managementapi/staffcommentlist/ HTTP/1.1" 200 20166
+Not Found: /favicon.ico
+[06/May/2019 06:50:30] "GET /favicon.ico HTTP/1.1" 404 4168
+[06/May/2019 07:31:14] "GET /studentlogin HTTP/1.1" 301 0
+[06/May/2019 07:31:14] "GET /studentlogin/ HTTP/1.1" 200 7104
+[06/May/2019 07:31:15] "GET /static/assets/img/course_2.png HTTP/1.1" 200 42393
+[06/May/2019 07:31:15] "GET /static/assets/img/course_3.png HTTP/1.1" 200 57344
+Not Found: /favicon.ico
+[06/May/2019 07:31:15] "GET /favicon.ico HTTP/1.1" 404 4168
+Not Found: /managementapi/studentcommentlist/10/
+[06/May/2019 07:31:39] "OPTIONS /managementapi/studentcommentlist/10/ HTTP/1.1" 404 5781
+Not Found: /managementapi/studentcommentlist/10/
+[06/May/2019 07:31:54] "OPTIONS /managementapi/studentcommentlist/10/ HTTP/1.1" 404 5781
+[06/May/2019 08:00:54] "OPTIONS /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 581
+[06/May/2019 08:01:10] "GET /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 18743
+[06/May/2019 08:01:11] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[06/May/2019 08:01:12] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[06/May/2019 08:01:13] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[06/May/2019 08:01:46] "GET /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 18743
+[06/May/2019 08:02:20] "OPTIONS /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 581
+[06/May/2019 10:04:26] "GET /studentlogin/ HTTP/1.1" 200 7104
+[06/May/2019 10:04:27] "GET /static/assets/css/font-awesome.css HTTP/1.1" 200 25197
+[06/May/2019 10:04:27] "GET /static/assets/css/style.css HTTP/1.1" 200 4628
+[06/May/2019 10:04:28] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 132546
+[06/May/2019 10:04:28] "GET /static/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23320
+Not Found: /favicon.ico
+[06/May/2019 10:04:28] "GET /favicon.ico HTTP/1.1" 404 4168
+Forbidden (CSRF token missing or incorrect.): /studentlogin/
+[06/May/2019 10:55:56] "POST /studentlogin/ HTTP/1.1" 403 2502
+Not Found: /favicon.ico
+[06/May/2019 10:55:56] "GET /favicon.ico HTTP/1.1" 404 4168
+Forbidden (CSRF token missing or incorrect.): /studentlogin/
+[06/May/2019 10:56:02] "POST /studentlogin/ HTTP/1.1" 403 2502
+[06/May/2019 10:56:14] "GET /admin/login/?next=/admin/auth/user/1/change/ HTTP/1.1" 200 1688
+[06/May/2019 10:56:14] "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+[06/May/2019 11:50:07] "GET /admin HTTP/1.1" 301 0
+[06/May/2019 11:50:08] "GET /admin/ HTTP/1.1" 302 0
+[06/May/2019 11:50:08] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1650
+[06/May/2019 11:50:10] "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+[06/May/2019 11:50:10] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[06/May/2019 11:50:38] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[06/May/2019 11:52:02] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[06/May/2019 11:52:03] "GET /admin/ HTTP/1.1" 200 7871
+[06/May/2019 11:52:03] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[06/May/2019 11:52:04] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[06/May/2019 11:52:04] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[06/May/2019 11:52:04] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[06/May/2019 11:52:04] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 05, 2019 - 13:05:19
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+10
+{'assign_group_pk': '3', 'assign_student_id': ['1', '2', '3']}
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 06, 2019 - 12:20:46
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 06, 2019 - 12:22:48
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 06, 2019 - 12:23:17
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.

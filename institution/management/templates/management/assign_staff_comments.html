@@ -31,14 +31,15 @@
  
   {% block Content_Area %}
   
-      <div class="row">
+   <div class="row">
       <div class="col-md-12">
                      <div class="row bootstrap snippets">
     <div class="col-md-10 col-md-offset-2 col-sm-12">
+     
         <div class="comment-wrapper">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Comment 
+                    Comments  for group {{ assign_group_detail.assign_group_pk }}
                 </div>
                 <div class="panel-body">
                 <div class="alert alert-success" style="display:none;" id="success-msg">
@@ -81,18 +82,16 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-	
-	
+	fetchdata()
 	function fetchdata(){
 		 
-		 var urldetails = 'http://3.18.113.243:8004/managementapi/staffcommentlist/';
+		 var urldetails = 'http://3.18.113.243:8004/managementapi/staffcommentlist/?group='+{{ assign_group_detail.assign_group_pk.id }};
 		 
 		 $.ajax({
 				
 			 
 			  url: urldetails,
 			  csrfmiddlewaretoken: "{{ csrf_token }}",
-			  //data: JSON.stringify(values),
 			  headers: {
 			      'Accept': 'application/json',
 			     'Content-Type': 'application/json'
@@ -104,9 +103,15 @@ $(document).ready(function(){
 				      var json_obj = JSON.parse(obj);
 			          console.log(json_obj)
 			          $('#append_list').empty();
-			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on){
+			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on,student_name,group_created_by,staff_name){
 				        	
-				        	$("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.message+'</strong><p>'+this.message+'</p></div></li>');
+			        	  if(this.group_created_by != null){
+			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.staff_name+'</strong><p>'+this.message+'</p></div></li>');
+			        	  }else {
+			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.student_name+'</strong><p>'+this.message+'</p></div></li>');
+			        		  
+			        	  }
+			        	  
 				        	
 				    });
 			          
@@ -120,23 +125,23 @@ $(document).ready(function(){
 		 
 		 
 	} 
-	 //setInterval(fetchdata,5000);	 
-	 setTimeout(fetchdata,1000);
+	 setInterval(fetchdata,5000);	 
+	 
 	
 	
-});
 
 
-$('body').on('click', '#post_data11', function(event) {
+
+$('body').on('click', '#post_data', function(event) {
 	event.preventDefault();
-	   var urldetails = 'http://3.18.113.243:8004/managementapi/staffcommentlist/';
+	   var urldetails = 'http://3.18.113.243:8004/managementapi/staffcomment/';
 		var group =  {{ assign_group_detail.assign_group_pk.id }}
-		var student_assign_id = {{ assign_group_detail.id}}
+		var staff_assign_id = {{ assign_group_detail.assign_group_pk.created_by.id}}
 		var message = $("#message_id").val();
 		var values  =	{ 	
 							
 							"assign_group_pk": group,
-							"assign_group_detail":student_assign_id,
+							"group_created_by":staff_assign_id,
 							"message":message
 		          			
 		       			}
@@ -155,9 +160,7 @@ $('body').on('click', '#post_data11', function(event) {
 			     },
 			   dataType: 'json',
 			   success: function(){
-			          //alert("Saved! It worked.");
-			          $('#success-msg').show();
-			        
+			         setTimeout(fetchdata,1000);
 			          
 			        },
 			   error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -165,12 +168,12 @@ $('body').on('click', '#post_data11', function(event) {
 			            }
 				
 		});
-		
+		 $("#message_id").val('');
 	
 
 });
 
-
+});
 
    
    </script>

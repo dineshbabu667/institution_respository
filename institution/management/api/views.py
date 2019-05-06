@@ -23,8 +23,8 @@ from management.models import Student,Courses,Group,AssignGroup,AssignGroupDetai
 
 # serializer
 from management.api.serializers import AssignGroupSerializer, GroupSerializer, AssignGroupDetailSerializer
-from management.api.serializers import AssignSerializer,AssignGroupListSerializer,StudentCommentsSerializer
-from management.api.serializers import StaffCommentsSerializer
+from management.api.serializers import AssignSerializer,AssignGroupListSerializer,StudentCommentsSerializer,StudentCommentsListSerializer
+from management.api.serializers import StaffCommentsSerializer,StaffCommentsListSerializer
 
 
 
@@ -89,17 +89,46 @@ class StudentGroupComments(generics.ListCreateAPIView):
     serializer_class = StudentCommentsSerializer
     queryset = AssignGroupComments.objects.all()
 
-class StudentGroupCommentList(generics.ListCreateAPIView):
+class StudentGroupCommentList(generics.ListAPIView):
     authentication_classes = ()
     permission_classes = ()
-    serializer_class = StudentCommentsSerializer
-    queryset = AssignGroupComments.objects.all()
+    serializer_class = StudentCommentsListSerializer
+    
+    def get_queryset(self):
+        queryset = AssignGroupComments.objects.all()
+        group = self.request.query_params.get("group", None)
+        if group:
+            queryset = queryset.filter(Q(assign_group_pk=group)).order_by('-created_on')
+        return queryset
+    
 
-class StaffGroupCommentList(generics.ListCreateAPIView):
+class StaffGroupComments(generics.ListCreateAPIView):
     authentication_classes = ()
     permission_classes = ()
     serializer_class = StaffCommentsSerializer
     queryset = AssignGroupComments.objects.all()
+
+class StaffGroupCommentList(generics.ListAPIView):
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = StaffCommentsListSerializer
+    
+    def get_queryset(self):
+        queryset = AssignGroupComments.objects.all()
+        group = self.request.query_params.get("group", None)
+        if group:
+            queryset = queryset.filter(Q(assign_group_pk=group)).order_by('-created_on')
+        return queryset
+
+
+
+class BlockStudentRudview(generics.RetrieveUpdateDestroyAPIView):
+    lookup_field= 'pk'
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = AssignGroupListSerializer
+    def get_queryset(self):
+        return AssignGroupDetail.objects.all()
 
 
 
@@ -108,9 +137,6 @@ class AssignGroupShowList(generics.ListAPIView):
     permission_classes = ()
     serializer_class = AssignGroupListSerializer
 
-    
-    
- 
     
     
 class GroupCreateview(generics.ListCreateAPIView):

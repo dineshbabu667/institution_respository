@@ -39,10 +39,20 @@ class AssignGroupDetail_Table(tables.Table):
    
    
     BUTTON_TEMPLATE = """ 
-        <a href="{% url 'management:staffcomments' record.assign_group_pk.id %}" class="btn btn-primary">Comments</a>
+    {% if record.assign_student_status == 1 %}
+    
+        <a href="{% url 'management:staffcomments' record.id %}" class="btn btn-primary">Comments</a>
         &nbsp;&nbsp;
-         <a href="#" class="btn btn-danger">Block</a>
-        
+         <a href="#" class="btn btn-danger block_btn" id="id-{{record.id}}-block_btn" rel="{{record.id}}">Block</a>
+          &nbsp;&nbsp;
+    {% endif %} 
+    {% if  record.assign_student_status == 2 %}    
+         <a href="#" class="btn btn-warning unblock_btn" id="id-{{record.id}}-unblock_btn" rel="{{record.id}}">UnBlock</a>
+    {% endif %}    
+     {% if  record.assign_student_status == 0 %}    
+          <a href="#" class="btn btn-info" >Request Sent</a>
+     {%endif %}
+     
     """
     # <a href="{% url 'Invoice:invoicecancel' record.id  %}" data-toggle="confirmation" data-original-title="Cancel! Are you sure ?"  title=""> <i class="fa fa-ban" aria-hidden="true" title="Cancel"></i></a>
     Actions = tables.TemplateColumn(BUTTON_TEMPLATE,orderable=False )

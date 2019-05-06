@@ -38,7 +38,7 @@
         <div class="comment-wrapper">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Comment 
+                    Comments  for group {{ assign_group_detail.assign_group_pk }}
                 </div>
                 <div class="panel-body">
                 <div class="alert alert-success" style="display:none;" id="success-msg">
@@ -81,18 +81,17 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-	
+	fetchdata()
 	
 	function fetchdata(){
 		 
-		 var urldetails = 'http://3.18.113.243:8004/managementapi/studentcommentlist/';
+		 var urldetails = 'http://3.18.113.243:8004/managementapi/studentcommentlist/?group='+{{ assign_group_detail.assign_group_pk.id }};
 		 
 		 $.ajax({
 				
 			 
 			  url: urldetails,
 			  csrfmiddlewaretoken: "{{ csrf_token }}",
-			  //data: JSON.stringify(values),
 			  headers: {
 			      'Accept': 'application/json',
 			     'Content-Type': 'application/json'
@@ -104,9 +103,15 @@ $(document).ready(function(){
 				      var json_obj = JSON.parse(obj);
 			          console.log(json_obj)
 			          $('#append_list').empty();
-			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on){
+			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on,student_name,group_created_by,staff_name){
 				        	
-				        	$("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.message+'</strong><p>'+this.message+'</p></div></li>');
+			        	  if(this.group_created_by != null){
+			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.staff_name+'</strong><p>'+this.message+'</p></div></li>');
+			        	  }else {
+			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.student_name+'</strong><p>'+this.message+'</p></div></li>');
+			        		  
+			        	  }
+			        	  
 				        	
 				    });
 			          
@@ -120,8 +125,8 @@ $(document).ready(function(){
 		 
 		 
 	} 
-	 //setInterval(fetchdata,5000);	 
-	 setTimeout(fetchdata,1000);
+	 setInterval(fetchdata,5000);	 
+	 
 	
 	
 });
@@ -156,8 +161,8 @@ $('body').on('click', '#post_data', function(event) {
 			   dataType: 'json',
 			   success: function(){
 			          //alert("Saved! It worked.");
-			          $('#success-msg').show();
-			        
+			          //$('#success-msg').show();
+			         setTimeout(fetchdata,1000);
 			          
 			        },
 			   error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -165,7 +170,7 @@ $('body').on('click', '#post_data', function(event) {
 			            }
 				
 		});
-		
+		 $("#message_id").val('');
 	
 
 });
