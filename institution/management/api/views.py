@@ -24,8 +24,8 @@ from management.models import Student,Courses,Group,AssignGroup,AssignGroupDetai
 # serializer
 from management.api.serializers import AssignGroupSerializer, GroupSerializer, AssignGroupDetailSerializer
 from management.api.serializers import AssignSerializer,AssignGroupListSerializer,StudentCommentsSerializer,StudentCommentsListSerializer
-from management.api.serializers import StaffCommentsSerializer,StaffCommentsListSerializer
-
+from management.api.serializers import StaffCommentsSerializer,StaffCommentsListSerializer,AssignGroupReadStatusSerializer,StaffupdatereadSerializer
+from management.api.serializers import StudentGroupDetailSerializer
 
 
 class JSONResponse(HttpResponse):
@@ -129,6 +129,40 @@ class BlockStudentRudview(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AssignGroupListSerializer
     def get_queryset(self):
         return AssignGroupDetail.objects.all()
+
+
+class StaffGroupReadstatus(generics.ListAPIView):
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = AssignGroupReadStatusSerializer
+    def get_queryset(self):
+        queryset = AssignGroupDetail.objects.filter(Q(assign_student_status=1) & Q(read_status=0))
+        return queryset
+
+
+class UpdateReadStatus(generics.RetrieveUpdateDestroyAPIView):
+    lookup_field= 'pk'
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = StaffupdatereadSerializer
+    def get_queryset(self):
+        return AssignGroupDetail.objects.all()
+
+
+class StudentGroupList(generics.ListAPIView):
+    authentication_classes = ()
+    permission_classes = ()
+    serializer_class = StudentGroupDetailSerializer
+    
+    def get_queryset(self):
+        queryset = AssignGroupDetail.objects.all()
+        student = self.request.query_params.get("student", None)
+        if student:
+            queryset = queryset.filter(Q(assign_student=student) & Q(read_status=0)).order_by('created_on')
+        return queryset
+
+
+
 
 
 

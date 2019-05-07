@@ -31,7 +31,7 @@
    									        </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Student </label>
+                                            <label>Student  (select multiple students)</label>
                                              <select id="id_assign_student" multiple="multiple" name="assign_student[]" class="form-control " required="required">
                 								{% for student in student_qs %}
              									 <option value="{{student.id }}">{{ student.user.username }}</option>

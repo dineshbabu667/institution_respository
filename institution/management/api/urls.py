@@ -9,7 +9,7 @@ from . import views
 from .views import AssignGroupCreateview,AssignGroupList,AssignGroupShowList, GroupCreateview
 from .views import AssignGroupRudview,StudentGroupComments,StudentGroupCommentList
 from .views import StaffGroupComments,StaffGroupCommentList
-from .views import BlockStudentRudview
+from .views import BlockStudentRudview,StaffGroupReadstatus,UpdateReadStatus,StudentGroupList
 
 assigngroupview = AssignGroupCreateview.as_view(
                 {
@@ -43,8 +43,9 @@ urlpatterns = [
             url(r'^staffcomment/$', StaffGroupComments.as_view(), name='staffcomment'),
             url(r'^staffcommentlist/$', StaffGroupCommentList.as_view(), name='staffcommentlist'),
             url(r'^studentblockapi/(?P<pk>[0-9]+)/$', BlockStudentRudview.as_view(), name='studentblockapi'), 
-            
-            
+            url(r'^staffreadstatus/$', StaffGroupReadstatus.as_view(), name='staffreadstatus'),
+            url(r'^readstatusupdateapi/(?P<pk>[0-9]+)/$', UpdateReadStatus.as_view(), name='readstatusupdateapi'), 
+            url(r'^studentgrouplist/$', StudentGroupList.as_view(), name='studentgrouplist'),
                  
             url(r'^groupapi/$', GroupCreateview.as_view(), name='groupapi'),
             

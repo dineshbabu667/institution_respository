@@ -46,11 +46,16 @@ class AssignGroupDetail_Table(tables.Table):
          <a href="#" class="btn btn-danger block_btn" id="id-{{record.id}}-block_btn" rel="{{record.id}}">Block</a>
           &nbsp;&nbsp;
     {% endif %} 
-    {% if  record.assign_student_status == 2 %}    
+    {% if  record.assign_student_status == 2 %}   
          <a href="#" class="btn btn-warning unblock_btn" id="id-{{record.id}}-unblock_btn" rel="{{record.id}}">UnBlock</a>
     {% endif %}    
      {% if  record.assign_student_status == 0 %}    
-             <a href="{% url 'management:staffcomments' record.id %}" class="btn btn-primary">Comments</a>
+             <div id="id-{{record.id}}-assign_comments" style="display:none;">
+                 <a href="{% url 'management:staffcomments' record.id %}" class="btn btn-primary">Comments</a>
+             </div>
+             <div id="id-{{record.id}}-assign_request" style="display:show;">
+                 <a href="#" class="btn btn-info">Request Sent</a>
+             </div>
      {%endif %}
      
     """
@@ -65,7 +70,7 @@ class AssignGroupDetail_Table(tables.Table):
          model =  AssignGroupDetail
          orderable = True
          attrs = {'class': 'table table-striped table-bordered table-hover','id':'Table_list'}
-         fields=['assign_group_pk','assign_student','assign_student_status','created_on','modified_on']   
+         fields=['assign_group_pk','assign_student','created_on','modified_on']   
          
          
          

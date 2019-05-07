@@ -24,6 +24,10 @@ ASSIGN_STATUS = (
           (2,'Block')
          
           )
+READ_STATUS = (
+          (0,'Unread'),
+          (1,'Read'),         
+          )
 
 class Student(models.Model):
     user = models.OneToOneField(User,related_name='student_user',on_delete=models.CASCADE)
@@ -85,6 +89,7 @@ class AssignGroupDetail(models.Model):
     assign_group_pk = models.ForeignKey(Group,related_name='assign_group_detail',verbose_name='Assign Group')
     assign_student = models.ForeignKey(Student, verbose_name='Student', related_name='assign_student_detail')
     assign_student_status =  models.IntegerField(choices=ASSIGN_STATUS, default=0,verbose_name='Assign Student Status')
+    read_status =  models.IntegerField(choices=READ_STATUS, default=0,verbose_name='Read Status')
     created_on = models.DateTimeField(auto_now_add = True)
     modified_on = models.DateTimeField(auto_now=True)
     

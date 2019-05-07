@@ -217,3 +217,28 @@ May 06, 2019 - 12:23:17
 Django version 1.11, using settings 'institution.settings'
 Starting development server at http://0:8004/
 Quit the server with CONTROL-C.
+[06/May/2019 14:32:52] "GET /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 10026
+Not Found: /favicon.ico
+[06/May/2019 14:32:53] "GET /favicon.ico HTTP/1.1" 404 4168
+[06/May/2019 14:32:57] "GET /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 10026
+[06/May/2019 14:32:58] "GET /managementapi/studentcommentlist/?group=2&assign_id=32 HTTP/1.1" 200 10026
+[07/May/2019 04:20:53] "GET /stafflanding HTTP/1.1" 200 16983
+[07/May/2019 04:21:01] "GET /static/assets/css/font-awesome.css HTTP/1.1" 200 25197
+[07/May/2019 04:21:01] "GET /static/assets/css/style.css HTTP/1.1" 200 4628
+[07/May/2019 04:21:01] "GET /static/assets/css/bootstrap.css HTTP/1.1" 200 132546
+[07/May/2019 04:21:04] "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.1.0 HTTP/1.1" 200 83760
+Not Found: /favicon.ico
+[07/May/2019 04:21:07] "GET /favicon.ico HTTP/1.1" 404 4168
+[07/May/2019 04:25:16] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[07/May/2019 04:25:16] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[07/May/2019 04:25:17] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[07/May/2019 04:25:25] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[07/May/2019 04:25:31] "GET /favicon.ico HTTP/1.1" 404 4168

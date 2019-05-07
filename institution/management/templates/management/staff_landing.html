@@ -39,7 +39,7 @@
 
  
     <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                      <!--    Hover Rows  -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -55,7 +55,9 @@
                     </div>
                     <!-- End  Hover Rows  -->
                 </div>
- 
+ 			 <div class="col-md-4">
+ 			 <div id="append_list"></div>
+ 			 </div>
  
  
  
@@ -79,15 +81,56 @@
 	$(document).ready(function(){
 		
 		
+		 fetchdata()
+		 function fetchdata(){
+			 
+			 var urldetails = 'http://3.18.113.243:8004/managementapi/staffreadstatus/';
+			 $.ajax({
+					
+				 
+				  url: urldetails,
+				  csrfmiddlewaretoken: "{{ csrf_token }}",
+				  headers: {
+				      'Accept': 'application/json',
+				     'Content-Type': 'application/json'
+				     },
+				 
+				   dataType: 'json',
+				   success: function(content){
+				          var obj = JSON.stringify(content);
+					      var json_obj = JSON.parse(obj);
+				          console.log(json_obj)
+				       		 $('#append_list').empty()
+				          $.each(json_obj, function(id,assign_group_pk,assign_student,assign_student_status,read_status,student_name,groupname){
+					        	
+				        	 $('#id-'+this.id+'-assign_comments').show();
+					         $('#id-'+this.id+'-assign_request').hide();	
+					         
+					         $('#append_list').append('<div class="alert alert-info alert-dismissable" id="id-'+this.id+'-readstatusshow">'+this.student_name+' accepeted your request '+this.groupname+'<a href="#" class="alert-link updatereadstatus" id="id-'+this.id+'-update_readstatus"> Click to Comments</a>.</div>');
+					       
+					         
+					         
+					    });
+				          
+				          
+				        },
+				   error: function(XMLHttpRequest, textStatus, errorThrown) {
+				            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+				            }
+					
+			});
+			 
+			 
+		} 
+		 setInterval(fetchdata,5000);
 		
-	
-		
+		 
 		 $('body').on('click', '.block_btn', function(event) {
 				
-				 event.preventDefault();
-				  var customer_id=$(this).attr('id');
-				  var fields = customer_id.split(/-/);
-				  var row_no = fields[1];
+				event.preventDefault();
+				var assign_id=$(this).attr('id');
+				var fields = assign_id.split(/-/);
+				var row_no = fields[1];
 				
 				var urldetails = 'http://3.18.113.243:8004/managementapi/studentblockapi/'+row_no+'/';
 				
@@ -97,7 +140,6 @@
 				          			
 				       			}
 				console.log(values);
-				
 				
 				
 				$.ajax({
@@ -115,8 +157,7 @@
 					          //alert("Saved! It worked.");
 					          $('#success-msg').show();
 					         $('#group_update').hide();
-					       
-					          
+					         window.location='/stafflanding/';
 					        },
 					   error: function(XMLHttpRequest, textStatus, errorThrown) {
 					            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
@@ -132,10 +173,10 @@
 		 $('body').on('click', '.unblock_btn', function(event) {
 				
 			 event.preventDefault();
-			  var customer_id=$(this).attr('id');
-			  var fields = customer_id.split(/-/);
+			  var assign_id=$(this).attr('id');
+			  var fields = assign_id.split(/-/);
 			  var row_no = fields[1];
-			alert('test')
+			
 			var urldetails = 'http://3.18.113.243:8004/managementapi/studentblockapi/'+row_no+'/';
 			
 			var values  =	{ 	
@@ -162,7 +203,7 @@
 				          //alert("Saved! It worked.");
 				          $('#unblocksuccess-msg').show();
 				         $('#group_update').hide();
-				       
+				         window.location ='/staffcomments/'+row_no+'/';
 				          
 				        },
 				   error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -171,11 +212,55 @@
 					
 			});
 
+		}); 
+		 
+		 
+		 
+		 
+		 $('body').on('click', '.updatereadstatus', function(event) {
+				
+			 event.preventDefault();
+			  var assign_id=$(this).attr('id');
+			  var fields = assign_id.split(/-/);
+			  var row_no = fields[1];
+			
+			var urldetails = 'http://3.18.113.243:8004/managementapi/readstatusupdateapi/'+row_no+'/';
+			
+			var values  =	{ 	
+								
+								"read_status": 1
+			          			
+			       			}
+			console.log(values);
+			
+			
+			
+			$.ajax({
+				
+				  type: "PUT",
+				  url: urldetails,
+				  csrfmiddlewaretoken: "{{ csrf_token }}",
+				  data: JSON.stringify(values),
+				  headers: {
+				      'Accept': 'application/json',
+				     'Content-Type': 'application/json'
+				     },
+				   dataType: 'json',
+				   success: function(){
+					   $('#id-'+this.id+'-readstatusshow').empty();
+					   window.location ='/staffcomments/'+row_no+'/';
+				        },
+				   error: function(XMLHttpRequest, textStatus, errorThrown) {
+				            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+				            }
+					
+			});
+
 		});
-		
-		
-		
-		
+		  
+		 
+		 
+		 
 	});
 	
 	

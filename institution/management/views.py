@@ -90,6 +90,7 @@ def student_landing(request):
     context={
              'Title':'Student Group List',
              'assign_group_qs':assign_group_qs,
+             'student_id':request.user.student_user.id,
             } 
    
     return render(request,'management/student_landing.html',context)

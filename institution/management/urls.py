@@ -17,6 +17,6 @@ urlpatterns = [
            
            url(r'^(?i)studentscomments/(?P<id>[-\w]+)/$', login_required(views.assign_student_comments), name='studentscomments'),
            
-            url(r'^(?i)staffcomments/(?P<id>[-\w]+)/$', login_required(views.assign_staff_comments), name='staffcomments'), 
+           url(r'^(?i)staffcomments/(?P<id>[-\w]+)/$', login_required(views.assign_staff_comments), name='staffcomments'), 
             
 ]          

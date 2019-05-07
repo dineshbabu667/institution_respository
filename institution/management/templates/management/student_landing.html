@@ -6,7 +6,7 @@
  {% block Content_Area %}
  
 <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
              <div class="alert alert-success" style="display:none;" id="success-msg">
   							<strong>Successfully join the group and plz click view the comments.</strong>
 						</div>
@@ -52,6 +52,9 @@
             
               
                             </div>
+                            <div class="col-md-4">
+ 			 <div id="append_list"></div>
+ 			 </div>
 
         </div>
             
@@ -65,7 +68,7 @@
  <script type="text/javascript">
 
  
-
+ $(document).ready(function(){
  
  $('body').on('click', '#student_group_update', function(event) {
 	
@@ -98,7 +101,7 @@
 		          $('#success-msg').show();
 		         $('#group_update').hide();
 		         $('#group_comments').show();
-		          
+		          window.location='/studentscomments/'+assign_id+'/';
 		        },
 		   error: function(XMLHttpRequest, textStatus, errorThrown) {
 		            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
@@ -110,6 +113,48 @@
  
  
  
+ fetchdata()
+	function fetchdata(){
+		 
+		 var urldetails = 'http://3.18.113.243:8004/managementapi/studentgrouplist/?student='+{{ student_id }};
+		 
+		 $.ajax({
+				
+			 
+			  url: urldetails,
+			  csrfmiddlewaretoken: "{{ csrf_token }}",
+			  headers: {
+			      'Accept': 'application/json',
+			     'Content-Type': 'application/json'
+			     },
+			 
+			   dataType: 'json',
+			   success: function(content){
+			          var obj = JSON.stringify(content);
+				      var json_obj = JSON.parse(obj);
+			          console.log(json_obj)
+			          $('#append_list').empty();
+			          $.each(json_obj, function(assign_group_pk,assign_student_id,groupname,created_on){
+				        	
+			        	  $('#append_list').append('<div class="alert alert-info alert-dismissable" id="id-'+this.id+'-readstatusshow">You have request from '+this.groupname+' group. please click the connect button.</div>');
+			        	  
+				        	
+				    });
+			          
+			          
+			        },
+			   error: function(XMLHttpRequest, textStatus, errorThrown) {
+			            alert("some error " +"1"+ String(errorThrown)+"2" + String(textStatus) +"3"+ String(XMLHttpRequest.responseText));
+			            }
+				 
+		});
+		 
+		 
+	} 
+	 setInterval(fetchdata,5000);
+ 
+ 
+});
  
  
  

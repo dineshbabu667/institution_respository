@@ -106,7 +106,7 @@ $(document).ready(function(){
 			          $.each(json_obj, function(assign_group_pk,assign_group_detail,message,created_on,student_name,group_created_by,staff_name){
 				        	
 			        	  if(this.group_created_by != null){
-			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.staff_name+'</strong><p>'+this.message+'</p></div></li>');
+			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">@ '+this.staff_name+'</strong><p>'+this.message+'</p></div></li>');
 			        	  }else {
 			        		  $("#append_list").append('<li class="media"><div class="media-body"><span class="text-muted pull-right"><small class="text-muted">'+this.created_on+'</small></span><strong class="text-success">'+this.student_name+'</strong><p>'+this.message+'</p></div></li>');
 			        		  

@@ -21,9 +21,6 @@ class AssignGroupSerializer(serializers.ModelSerializer):
         fields = ('group', 'status', )
        
 
-
-
-
 class AssignGroupDetailSerializer(serializers.ModelSerializer):
   
     
@@ -68,6 +65,35 @@ class StaffCommentsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = AssignGroupComments
         fields = ('assign_group_pk','assign_group_detail','group_created_by','student_name','staff_name', 'message', 'created_on')
+
+
+
+class AssignGroupReadStatusSerializer(serializers.ModelSerializer):
+    
+    student_name = serializers.ReadOnlyField(source='assign_student.user.username')
+    groupname = serializers.ReadOnlyField(source='assign_group_pk.group_name')
+    class Meta:
+        model = AssignGroupDetail
+        fields = ('id','assign_group_pk','assign_student','groupname','student_name','assign_student_status','read_status' )  
+
+
+class StaffupdatereadSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = AssignGroupDetail
+        fields = ('read_status', ) 
+
+
+class StudentGroupDetailSerializer(serializers.ModelSerializer):
+  
+    groupname = serializers.ReadOnlyField(source='assign_group_pk.group_name')
+    class Meta:
+        model = AssignGroupDetail
+        fields = ('assign_group_pk', 'assign_student_id','groupname','created_on' )  
+
+
+
+
 
        
      
