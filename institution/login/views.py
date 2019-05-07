@@ -47,11 +47,11 @@ class RegisterStudent(CreateView):
         user_id=user_form.id
         form2.instance.user = user_form
         form2.save()
-        request.session['customer_login'] ='customer_login'        
-        user = auth.authenticate(username=user_form.username, password=raw_password)
-        auth.login(self.request, user_form)
+        
+        #user = auth.authenticate(username=user_form.username, password=raw_password)
+        #auth.login(self.request, user_form)
        
-        return HttpResponseRedirect('/studentlanding/',)
+        return HttpResponseRedirect('/home/',)
     
     
 def student_login(request):

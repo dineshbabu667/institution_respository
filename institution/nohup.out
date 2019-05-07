@@ -242,3 +242,230 @@ Not Found: /favicon.ico
 [07/May/2019 04:25:25] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
 Not Found: /favicon.ico
 [07/May/2019 04:25:31] "GET /favicon.ico HTTP/1.1" 404 4168
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 07, 2019 - 07:23:37
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+[07/May/2019 07:23:51] "GET /studentscomments/56/ HTTP/1.1" 200 9165
+[07/May/2019 07:23:51] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:23:51] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:23:52] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[07/May/2019 07:23:57] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:23:57] "GET /studentscomments/56/ HTTP/1.1" 200 9165
+[07/May/2019 07:23:58] "GET /studentscomments/56/ HTTP/1.1" 200 9165
+[07/May/2019 07:23:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:23:59] "GET /static/assets/css/bootstrap.css.map HTTP/1.1" 404 1700
+[07/May/2019 07:24:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:15] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:24:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:00] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:05] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:25:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:10] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:26:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:27:57] "GET /managementapi/staffreadstatus/ HTTP/1.1" 200 9844
+[07/May/2019 07:27:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+Not Found: /
+[07/May/2019 07:28:01] "GET / HTTP/1.1" 404 4117
+[07/May/2019 07:28:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:05] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[07/May/2019 07:28:06] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[07/May/2019 07:28:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:28:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:45] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:49] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:50] "GET /register/ HTTP/1.1" 200 9704
+[07/May/2019 07:29:54] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:29:59] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:04] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:09] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:14] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:19] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:24] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+  File "/home/itadmin/institution/institution/login/views.py", line 50, in form_valid
+    request.session['customer_login'] ='customer_login'
+NameError: name 'request' is not defined
+[07/May/2019 07:30:27] "POST /register/ HTTP/1.1" 500 86358
+[07/May/2019 07:30:29] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:34] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:39] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:44] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:30:57] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:31:11] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:31:15] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:31:16] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:31:17] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:31:17] "GET /managementapi/studentcommentlist/?group=6 HTTP/1.1" 200 329
+[07/May/2019 07:32:21] "POST /register/ HTTP/1.1" 200 9787
+[07/May/2019 07:32:21] "GET /static/assets/css/bootstrap.css HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/css/style.css HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/css/font-awesome.css HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/js/custom.js HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/js/jquery-1.10.2.js HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/js/bootstrap.js HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/img/course_2.png HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/img/course_1.png HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/img/company_logo.jpg HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/img/course_3.png HTTP/1.1" 304 0
+[07/May/2019 07:32:23] "GET /static/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+Not Found: /log_out
+[07/May/2019 07:32:35] "GET /log_out HTTP/1.1" 404 4156
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 07, 2019 - 07:23:45
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+Not Found: /log_out
+[07/May/2019 07:33:16] "GET /log_out HTTP/1.1" 404 4156
+Not Found: /
+[07/May/2019 07:33:19] "GET / HTTP/1.1" 404 4117
+[07/May/2019 07:33:27] "GET /home/ HTTP/1.1" 200 8243
+Not Found: /home/assets/img/user2.png
+[07/May/2019 07:33:28] "GET /home/assets/img/user2.png HTTP/1.1" 404 4210
+[07/May/2019 07:33:30] "GET /register/ HTTP/1.1" 200 9704
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+TypeError: form_valid() missing 1 required positional argument: 'form'
+[07/May/2019 07:34:13] "POST /register/ HTTP/1.1" 500 81558
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 07, 2019 - 07:33:08
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+TypeError: form_valid() missing 1 required positional argument: 'form'
+[07/May/2019 07:35:48] "POST /register/ HTTP/1.1" 500 81693
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 217, in post
+    return super(BaseCreateView, self).post(request, *args, **kwargs)
+  File "/home/itadmin/institution/lib/python3.6/site-packages/django/views/generic/edit.py", line 183, in post
+    return self.form_valid(form)
+TypeError: form_valid() missing 1 required positional argument: 'form'
+[07/May/2019 07:35:56] "POST /register/ HTTP/1.1" 500 81693
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 07, 2019 - 07:35:44
+Django version 1.11, using settings 'institution.settings'
+Starting development server at http://0:8004/
+Quit the server with CONTROL-C.
