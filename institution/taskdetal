@@ -1,0 +1,29 @@
+://www.geeksforgeeks.org/creating-pandas-dataframe-using-list-of-lists/
+
+
+from models import Product
+def ProductView(request):
+  qs = Product.pdobjects.all()  # Use the Pandas Manager
+  df = qs.to_dataframe()
+  template = 'product.html'
+
+  #Format the column headers for the Bootstrap table, they're just a list of field names,
+  #duplicated and turned into dicts like this: {'field': 'foo', 'title: 'foo'}
+  columns = [{'field': f, 'title': f} for f in Product._Meta.fields]
+  #Write the DataFrame to JSON (as easy as can be)
+  json = df.to_json(orient='records')  # output just the records (no fieldnames) as a collection of tuples
+  #Proceed to create your context object containing the columns and the data
+  context = {
+             'data': json,
+             'columns': columns
+            }
+  #And render it!
+  return render(request, template, context)
+
+
+https://datatofish.com/export-pandas-dataframe-json/
+
+
+https://www.geeksforgeeks.org/python-pandas-dataframe-to_dict/
+~
+
