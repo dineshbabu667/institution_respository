@@ -7,7 +7,7 @@ django-filter==1.0.2
 django-tables2==2.0.3
 django-widget-tweaks==1.4.1
 djangoajax==2.3.5
-djangorestframework==3.9.3
+djangorestframework==3.11.2
 ipdb==0.12
 ipython==7.5.0
 ipython-genutils==0.2.0
